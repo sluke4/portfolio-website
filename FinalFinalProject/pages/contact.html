@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Sarah Luke's Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn more about Sarah Luke">
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <style>
+    html { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Cambria, sans-serif;
+      background-image: url("../images/typography.jpg");
+     }
+
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: beige;
+    }
+
+    header {
+      height: 135px;
+      padding: 20px 20px 0 20px;
+    }
+
+    #nav {
+      height: 34px;
+      width: 600px;
+      float: right;
+      margin-top: 40px;
+      margin-right: 50px;
+    }
+
+    #nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #nav li {
+      display: inline-block;
+    }
+
+    #nav a {
+      text-decoration: none;
+      color: white;
+      background-color: #F270B5;
+      font-weight: bold;
+      padding: 8px 12px;
+    }
+
+    #main {
+      padding: 60px 30px;
+    }
+
+    #textbox {
+      max-width: 600px;
+      float: left;
+    }
+
+    #textbox h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    #textbox h2 {
+      font-size: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    #textbox p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    #button {
+      margin-top: 20px;
+      padding: 14px 28px;
+      background-color: #F270B5;
+      color: white;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    #hero {
+      width: 500px;
+      height: auto;
+      background-color: #eee;
+      margin-left: auto;
+    }
+
+    #hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: -60px;
+    }
+
+    #footer {
+      text-align: center;
+      padding: 20px 0;
+      color: black;
+      background-color: beige;
+      font-size: 0.9em;
+      clear: both;
+    }
+
+    #form {
+      background-color: beige;
+      padding: 20px 40px 60px 40px;
+    }
+
+    /* FORM STRUCTURE */
+    input, select, textarea, button {
+      display: block;
+      margin-bottom: 6px;
+      padding: 3px;
+    }
+
+    input[type=text], input[type=email], select, textarea {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    input[type=radio] {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    /* FORM TYPOGRAPHY */
+    #form p {
+      margin-bottom: 4px;
+    }
+
+    #radio {
+      margin: 20px 0;
+    }
+
+    input[type=email] + p {
+      color: red;
+      font-size: .75rem;
+      margin-top: 6px;
+    }
+
+    /* FORM BUTTONS */
+    button {
+      width: 100px;
+      border-radius: 6px;
+    }
+
+    button, button:visited {
+      margin-top: 20px;
+      background-color: red;
+      color: white;
+      font-weight: bold;
+      border: 0;
+    }
+
+    button:hover, button:focus, button:active {
+      background-color: aqua;
+      color: black;
+    }
+
+    button[type=reset], button[type=reset]:visited {
+      background-color: darkkhaki;
+      color: black;
+    }
+
+    button[type=reset]:hover, button[type=reset]:focus, button[type=reset]:active {
+      background-color: #999;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header class="clearfix">
+      <nav id="nav">
+        <ul>
+          <li><a href="../index.html">Index</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="form">
+      <h2>Form</h2>
+      <h3>Contact us:</h3>
+      <form action="mailto:sample@sample.com" method="post" enctype="text/plain">
+
+        <!-- NAME -->
+        <input type="text" name="firstname" required autofocus placeholder="First Name*">
+        <input type="text" name="lastname" required placeholder="Last Name*">
+
+        <!-- EMAIL -->
+        <input type="email" name="email" required placeholder="Email*">
+        <p>* is required</p>
+
+        <!-- RADIO BUTTONS -->
+        <div id="radio">
+          <p>Favorite Web Language</p>
+          <input type="radio" id="html" name="language" value="HTML">
+          <label for="html">HTML</label><br>
+
+          <input type="radio" id="css" name="language" value="CSS">
+          <label for="css">CSS</label><br>
+
+          <input type="radio" id="java" name="language" value="JavaScript">
+          <label for="java">JavaScript</label><br>
+        </div>
+
+        <!-- REASON FOR EMAIL -->
+        <p>Reason for email:</p>
+        <select name="reason">
+          <option value="instruction">I'm looking for instruction</option>
+          <option value="newsletter">I'm looking for newsletter</option>
+          <option value="other">I'm looking for other reason</option>
+          <option value="web">I notice an error on your website</option>
+        </select>
+
+        <!-- COMMENT -->
+        <textarea name="comment" cols="45" rows="4" placeholder="Comments"></textarea>
+
+        <!-- BUTTONS -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+
+    <footer id="footer">
+      &copy; 2025 Sarah Luke · All Rights Reserved
+    </footer>
+  </div>
+</body>
+</html>

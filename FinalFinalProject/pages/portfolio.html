@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Sarah Luke's Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sarah Luke's Portfolio">
+  <link rel="stylesheet" href="css/normalize.css">
+	
+  <style>
+    html { box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: inherit; }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Cambria, sans-serif;
+      background-image:url("../images/typography.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: beige;
+    }
+
+    header {
+      height: 135px;
+      padding: 20px 20px 0 20px;
+    }
+
+    #nav {
+      height: 34px;
+      width: 600px;
+      float: right;
+      margin-top: 40px;
+      margin-right: 50px;
+    }
+
+    #nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #nav li {
+      display: inline-block;
+    }
+
+    #nav a {
+      text-decoration: none;
+      color: white;
+      background-color: #F270B5;
+      font-weight: bold;
+      padding: 8px 12px;
+    }
+
+    #main {
+      padding: 60px 30px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery a img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery a:hover img {
+      transform: scale(1.05);
+    }
+
+    #footer {
+      text-align: center;
+      padding: 20px 0;
+      color: black;
+      background-color: beige;
+      font-size: 0.9em;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header class="clearfix">
+      <nav id="nav">
+        <ul>
+          <li><a href="../index.html">Index</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="main" class="clearfix">
+      <h1>Design Portfolio</h1>
+      <div class="gallery">
+        <a href="albumCover.html" target="_blank">
+  		<img src="../images/typography.jpg" alt="Album Cover Design">
+		</a>
+        <a href="apple.html" target="_blank">
+          <img src="../images/apple.jpg" alt="Apple Design">
+        </a>
+        <a href="newsletter.html" target="_blank">
+          <img src="../images/newsletter.png" alt="Newsletter screenshot">
+        </a>
+        <a href="animal.html" target="_blank">
+          <img src="../images/portrait.png" alt="Portrait Final">
+        </a>
+        <a href="surreal.html" target="_blank">
+          <img src="../images/surreal.jpg" alt="Surreal Composite Design">
+        </a>
+      </div>
+    </div>
+
+    <footer id="footer">
+      &copy; 2025 Sarah Luke · All Rights Reserved
+    </footer>
+  </div>
+</body>
+</html>

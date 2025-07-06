@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Sarah Luke's Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Sarah Luke's website">
+  <link rel="stylesheet" href="css/normalize.css">
+
+  <style>
+     {
+      outline: 1px solid red; /* For debugging layout */
+    }
+
+    html { box-sizing: border-box;}
+    *, *::before, *::after { box-sizing: inherit; }
+
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Cambria, sans-serif;
+      background-image: url("images/typography.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: beige;
+    }
+
+    header {
+      height: 135px;
+      padding: 20px 20px 0 20px;
+    }
+
+    #nav {
+      height: 34px;
+      width: 600px;
+      float: right;
+      margin-top: 40px;
+      margin-right: 50px;
+    }
+
+    #nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    #nav li {
+      display: inline-block;
+    }
+
+    #nav a {
+      text-decoration: none;
+      color: white;
+      background-color: #F270B5;
+      font-weight: bold;
+      padding: 8px 12px;
+    }
+
+    #main {
+      padding: 60px 30px;
+    }
+
+    #textbox {
+      max-width: 500px;
+      float: left;
+    }
+
+    #textbox h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    #textbox h2 {
+      font-size: 1.6em;
+      margin-bottom: 20px;
+    }
+
+    #textbox p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .button-link {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 14px 28px;
+      background-color: #F270B5;
+      color: white;
+      text-decoration: none;
+      font-size: 1em;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+
+    #hero {
+      width: 500px;
+      height: auto;
+      background-color: #eee;
+      float: right;
+    }
+
+    #hero img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-top: -60px;
+    }
+
+    #footer {
+      text-align: center;
+      padding: 20px 0;
+      color: black;
+      background-color: beige;
+      font-size: 0.9em;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header class="clearfix">
+      <nav id="nav">
+        <ul>
+          <li><a href="index.html">Index</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/resume.html">Resume</a></li>
+          <li><a href="pages/portfolio.html">Portfolio</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="main" class="clearfix">
+      <div id="textbox">
+        <h1>Sarah Luke</h1>
+        <h2>Web Designer</h2>
+        <p>A Digital Media and Web Technology student at Montgomery College, exploring playful HTML/CSS structure and digital experiences. This portfolio highlights my growing skills and projects in front-end design.</p>
+        <a href="pages/portfolio.html" class="button-link">View My Work</a>
+      </div>
+      <div id="hero">
+        <img src="images/typography.jpg" alt="Album Cover for Walking on a Dream">
+      </div>
+    </div>
+
+    <footer id="footer">
+      &copy; 2025 Sarah Luke · All Rights Reserved
+    </footer>
+  </div>
+</body>
+</html>
